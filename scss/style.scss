@@ -1,0 +1,243 @@
+//--------------------------------------------------------------
+//                         Animate.css
+//--------------------------------------------------------------
+
+@import "../assets/animate.css/animate.min.css";
+
+//--------------------------------------------------------------
+//                         Customize Bootstrap
+//--------------------------------------------------------------
+
+/* Colors */
+$primary: #445a69;
+
+$tooltip-font-size: 1.6rem;
+$tooltip-bg: rgba($color: rgb(40, 40, 40), $alpha: 0.5);
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap';
+
+
+
+//--------------------------------------------------------------
+//                             GENERAL
+//--------------------------------------------------------------
+
+// Variables
+$main-font: 'Poppins', sans-serif;
+
+* {
+    transition: .3s;    
+}
+body {
+    font-family: $main-font;
+}
+html {
+    font-size: 62.5%;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 3rem;
+    &::before {
+        content: "# ";
+        color: $primary;
+    }
+}
+
+//--------------------------------------------------------------
+//                             HERO
+//--------------------------------------------------------------
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/img/hero-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 5.5rem;
+        text-transform: uppercase;
+
+        div {
+            border-radius: .4rem;
+            padding: .2rem 1rem;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+}
+.hero-group {
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba($color: rgb(40, 40, 40), $alpha: 1);
+    border-radius: .3rem;
+    img {
+        width: 2.5rem;
+        height: auto;
+        margin: 0 .4rem;
+    }$main-font: 'Poppins', sans-serif;
+
+    body {
+        font-family: $main-font;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .hero {
+        height: 70vh;
+        background-size: cover;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+//--------------------------------------------------------------
+//                             PROJECTS
+//--------------------------------------------------------------
+
+.projects {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    h2{
+        margin-bottom: 2rem;
+    }
+    .more-projects {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        float: right;
+    }
+}
+.card-wrapper {
+    text-decoration: none;
+}
+.card {
+    padding: 0;
+    transition: .3s ease-out;
+    margin: .5rem;
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 2px 2px 5px rgba($color: rgb(40, 40, 40), $alpha: 0.2), -2px -2px 5px rgba($color: $primary, $alpha: 0.1);
+    } 
+}
+.project-card {
+    .card-body {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+ 
+    }
+    .card-title {
+        font-weight: bold;
+    }
+    .card-technologies {
+        font-size: 1.3rem;
+    }
+    .card-text {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        font-size: 1.6rem;
+    }
+    .btn {
+        font-size: 1.6rem;
+    }
+}
+
+@include media-breakpoint-up (md) {
+    .project-card {
+        height: 38rem;
+        .card-body {
+            position: relative;
+            .btn {
+                position: absolute;
+                bottom: 0;
+                margin-bottom: .8rem;
+            }
+        }
+    }
+    .projects {
+        background-image: url("../assets/img/shape-1.png");
+        background-repeat: no-repeat;
+        background-size: 120px;
+        background-position-x: 100%;
+        background-position-y: 97%;
+    }
+}
+//--------------------------------------------------------------
+//                             SKILLS
+//--------------------------------------------------------------
+
+.skills {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+.skills-card {
+    font-size: 1.6rem;
+    .card-header {
+        text-transform: capitalize;
+        padding: 1rem;
+        background-color: lighten($primary, 12%);
+        color: #fff;
+        border: darken($primary, 10%) solid .1rem;
+        letter-spacing: .05rem;
+    }
+    .list-group .list-group-item {
+        padding: 1rem;
+        background-color: lighten($primary, 40%);
+        color: #000;
+        border-bottom: darken($primary, 10%) solid .1rem;
+        border-left: darken($primary, 10%) solid .1rem;
+        border-right: darken($primary, 10%) solid .1rem;
+    }
+}
+//--------------------------------------------------------------
+//                             ABOUT
+//--------------------------------------------------------------
+.about {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .about-text {
+        font-size: 1.6rem;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .about {
+        margin-top: 12rem;
+        background-image: url("../assets/img/about.svg");
+        background-repeat: no-repeat;
+        background-size: 45rem;
+        background-position-x: 100%;
+        background-position-y: 60%;
+    }
+    .about-text {
+        width: 60%;
+    }
+}
+//--------------------------------------------------------------
+//                             CONTACT
+//--------------------------------------------------------------
+.contact {
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+
+    .contact-link {
+        text-decoration: none;
+        padding: 0;
+        font-size: 5rem;
+    }
+}
